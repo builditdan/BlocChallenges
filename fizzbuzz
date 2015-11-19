@@ -1,0 +1,29 @@
+# return an array
+def fizzbuzz(n)
+ new_array = []
+ 
+ count=1
+ loop do
+   
+   break if count > n
+
+   multiple_of_3 = (count % 3).zero?
+   multiple_of_5 = (count % 5).zero?
+   
+   if (multiple_of_3 && multiple_of_5)
+     new_array << "FizzBuzz"
+   elsif multiple_of_3
+     new_array << "Fizz"
+   elsif multiple_of_5
+     new_array << "Buzz"
+   else
+     new_array << count
+   end
+   
+   count += 1
+
+end
+
+new_array
+
+end
